@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+
+/* PAGE TITLE */
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+/* BOOK GRID */
+
+.book-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(220px, 1fr)
+  );
+
+  gap: 20px;
+}
+
+
+/* BOOK TILE */
+
+.book-tile {
+  background-color: white;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  padding: 20px;
+
+  min-height: 180px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+
+/* HOVER EFFECT */
+
+.book-tile:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* BOOK TITLE */
+
+.book-title h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  color: #222;
+}
+
+
+/* BOOK DETAILS */
+
+.book-details p {
+  margin: 8px 0;
+
+  color: #555;
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+  padding: 30px;
+
+  background-color: white;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  text-align: center;
+
+  color: #666;
+}

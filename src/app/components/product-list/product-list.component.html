@@ -1,0 +1,49 @@
+<h2>Books</h2>
+
+@if (filterService.filteredProducts().length > 0) {
+
+  <div class="book-grid">
+
+    @for (
+      product of filterService.filteredProducts();
+      track product.id
+    ) {
+
+      <article class="book-tile">
+
+        <div class="book-title">
+          <h3>{{ product.name }}</h3>
+        </div>
+
+        <div class="book-details">
+
+          <p>
+            <strong>Age:</strong>
+            {{ product.ageMin }} - {{ product.ageMax }}
+          </p>
+
+          <p>
+            <strong>Pages:</strong>
+            {{ product.pages }}
+          </p>
+
+          <p>
+            <strong>Rating:</strong>
+            {{ product.rating }}
+          </p>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+} @else {
+
+  <div class="no-results">
+    <p>No books match your filters.</p>
+  </div>
+
+}

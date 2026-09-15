@@ -1,12 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+
+import { FilterPanelComponent }
+  from './components/filter-panel/filter-panel.component';
+
+import { ProductListComponent }
+  from './components/product-list/product-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    FilterPanelComponent,
+    ProductListComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('booksearch');
+export class AppComponent {
+
 }

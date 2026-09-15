@@ -1,0 +1,28 @@
+<h2>Filters</h2>
+
+<br>
+
+<app-filter-button
+  label="Clear Filters"
+  (selected)="clearFilters()">
+</app-filter-button>
+
+
+@for (key of filterKeys; track key) {
+
+  <div>
+    <h3>{{ key }}</h3>
+
+    @for (filter of filterable; track filter.label) {
+
+      @if (filter.key === key) {
+        <button
+          (click)="setFilter(filter)">
+          {{ filter.label }}
+        </button>
+      }
+
+    }
+  </div>
+
+}
